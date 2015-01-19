@@ -17,7 +17,7 @@ column headers for the measurement variables and names for the activity type(ex:
 ######   Note: This was interpreted as extracting only the columns in the dataset that referenced "mean" or "std".
 
 ##### 3) Uses descriptive activity names to name the activities in the data set
-######   This was interpreted as providing names rather than number for activities (ex: Walking not "1")
+######   This was interpreted as providing names rather than number for activities (ex: "Walking" not "1")
 
 ##### 4) Appropriately labels the data set with descriptive variable names.
 ###### Note This was interpreted as providing column names for the variables from the "Feature.List" dataset.
