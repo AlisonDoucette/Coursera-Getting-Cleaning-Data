@@ -11,7 +11,7 @@ column headers for the measurement variables and names for the activity type(ex:
 
 ###### You should create one R script called run_analysis.R that does the following. 
 ##### Merges the training and the test sets to create one data set.
-#####   Note: This was interpreted as binding together the training and test datasets(each with a different set of subjects)
+######   Note: This was interpreted as binding together the training and test datasets(each with a different set of subjects)
 
 ##### Extracts only the measurements on the mean and standard deviation for each measurement. 
 #####   Note: This was interpreted as extracting only the columns in the dataset that referenced "mean" or "std".
