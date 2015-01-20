@@ -10,13 +10,13 @@ Coursera-Getting-Cleaning-Data
 
 ###### You should create one R script called run_analysis.R that does the following. 
 ##### 1) Merges the training and the test sets to create one data set.
-######   Note: This was interpreted as binding together the training and test datasets(each with a different set of subjects)
+######   Note: This was interpreted as binding together the training and test datasets(each with a different set of subjects).
 
 ##### 2) Extracts only the measurements on the mean and standard deviation for each measurement. 
 ######   Note: This was interpreted as extracting only the columns in the dataset that referenced "mean" or "std".
 
-##### 3) Uses descriptive activity names to name the activities in the data set
-######   This was interpreted as providing names rather than number for activities (ex: "Walking" not "1")
+##### 3) Uses descriptive activity names to name the activities in the data set.
+######   This was interpreted as providing names rather than number for activities (ex: "Walking" not "1").
 
 ##### 4) Appropriately labels the data set with descriptive variable names.
 ###### Note This was interpreted as providing column names for the variables from the "Feature.List" dataset.
