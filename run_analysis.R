@@ -1,12 +1,29 @@
-## Download zipfile to new working directory
+##  This script does the following:
+##  1) Creates Project Directories
+##  2) Downloads a zip file to the new Project Directory
+##  3) Reads in files and creates data tables
+##  4) Selects specifif colunns (Mean and STD) from Test and Train data tables
+##  5) Stitches together colunn headers from a measurement variables (Features) names table
+##  6) Stitches together Subject data and observational data
+##  7) Looks up Activity Names in Activity Data table
+##  8) Joins together the "stitched" Test and Train tables into a "Tidy Dataset'
+##  9) Calculates the means by Subject
+##  10) Calculates the means by Activity
+##  11) Stitches together the means files
+##  12) Write the means files out to an external data table
+##
+## Load Libraries
+library(reshape)
+library(plyr) 
+library(dplyr)
+library(downloader)
+Download zipfile to brand-new working directory
 ##
 setwd("C:/Alison/R/R Working Directory")
-## Create directory
+## Create Project Directories
 ##
 ProjectDir <- "C:/Alison/R/R Working Directory/Project"
 SubDir <-"C:/Alison/R/R Working Directory/Project/ProjectFiles"
-library(reshape)
-library(dplyr)
 if (file.exists(ProjectDir)){
     setwd(file.path(ProjectDir))
 } else {
@@ -81,12 +98,15 @@ colnames(Subject.Train) <- "SubjectNum"
 Train.Data<-cbind(Subset.Columns.TrainX,TrainY,Subject.Train)
 Train.Data2 <-merge(Train.Data, Activity_Levels, by= "Activity")
 Final.Data<-rbind(Test.Data2,Train.Data2)
+## reorder columns in Final Data - This is the "Tidy Data #1"
 Final.Data2 <- Final.Data[, c(1,82,81,2:80)]
 Final.Data3 <- arrange(Final.Data2,Activity,SubjectNum)
-## write.table(Final.Data,"C:/Alison/R/R Working Directory/Project/ProjectFiles/Final.Data.txt")
+## Calculate Means for Activity and for Subjects
 Activity.Means <- aggregate(Final.Data3[,4:82], by=list(Final.Data$Activity.Name), FUN=mean)
 Subject.Means <- aggregate(Final.Data3[,4:82], by=list(Final.Data$SubjectNum), FUN=mean)
-Activity.Means <- rename(Activity.Means,c('Group.1'='Activity/Subject'))
-Subject.Means <- rename(Subject.Means,c('Group.1'='Activity/Subject'))
+Subject.Means <- rename(Subject.Means,c("Group.1"="Activity/Subject"))
+Activity.Means <- rename(Activity.Means,c("Group.1"="Activity/Subject"))
+## Join together Activity Means file and Subject Means File - Note - not Subject with Activity as instructions do not say "within"
 Output.Data <- rbind(Subject.Means,Activity.Means)
+## Write Output Data TAble File
 write.table(Output.Data,"C:/Alison/R/R Working Directory/Project/ProjectFiles/Output.Data.txt",row.name=FALSE)
