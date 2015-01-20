@@ -1,5 +1,4 @@
 ### Coursera-Getting-Cleaning-Data: run_analysis.R script.
-#### Overall purpose of script:
 ##### The purpose of the run.analysis.R script is to:
 ###### 1 Download a zip file of smart phone data from 
 ###### http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
