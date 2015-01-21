@@ -124,6 +124,6 @@ library(plyr)
     write.table(Output.Data2,"C:/Alison/R/R Working Directory/Project/ProjectFiles/Output.Data2.txt",row.name=FALSE)
 ## Write Output Data Table - Interpretation #3 - 1 row for each Activity/Subject Means
     Output.Data3 <- aggregate(Final.Data3[,4:82], by=list(Final.Data$SubjectNum, Final.Data$Activity.Name), FUN=mean)
-    Output.Data3 <- rename(Output.Data3,c("Group.2"="Subject",Group.2="Activity"))
-    Output.Data3 <- Output.Data3[with(Output.Data3, order(Output.Data3$Activity, Output.Data3$Subject)),]
+    Output.Data3 <- rename(Output.Data3,c("Group.1"="Subject",Group.2="Activity"))
+    Output.Data3 <- Output.Data3[with(Output.Data3, order(Output.Data3$Subject, Output.Data3$Activity)),]
     write.table(Output.Data3,"C:/Alison/R/R Working Directory/Project/ProjectFiles/Output.Data3.txt",row.name=FALSE)
