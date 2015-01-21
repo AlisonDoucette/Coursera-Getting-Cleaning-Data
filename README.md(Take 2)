@@ -1,0 +1,5 @@
+# Coursera-Getting-Cleaning-Data
+After completing Take 1 of the Project I realized that there could be a different interpretation of Step #5:
+"From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject."
+This could also be interpreted as one row for each Activity/Subject Combination.
+Take 2 of the script takes this interpretation. 
