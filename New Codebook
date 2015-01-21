@@ -24,12 +24,14 @@ The Output.Data2 file contains calculated means data for the smart phone dataset
 * Subjects are numbered from 1 to 30. The age bracket for these subjects was 19-48 years.
 * Activities are alphanumeric: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
 * The variables(80 columns) are for the means of the mean and standard deviations (in Hz) for sensor data for the x,y,z axes.
+* There is 1 row for the means for each Activity/Subject combination.
 
 The Output.Data3 file contains calculated means data for the smart phone dataset referenced above.
 * The first column in the dataset is for the Subject, the second column is for the Activity.
 * Subjects are numbered from 1 to 30. The age bracket for these subjects was 19-48 years.
 * Activities are alphanumeric: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
 * The variables(80 columns) are for the means of the mean and standard deviations (in Hz) for sensor data for the x,y,z axes.
+* There is 1 row for the means for each Subject/Activity combination.
 
 Notes on variables: (from original dataset descriptions)
 * The variables come from the an accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. 
