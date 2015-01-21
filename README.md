@@ -25,3 +25,5 @@
 ###### The resulting output from this assumption is Output1.txt
 ###### Note: This was secondly interpreted as creating a row of variable averages for each of the Subjects within Activities
 ###### The resulting output from this assumption is Output2.txt
+###### Note: This was secondly interpreted as creating a row of variable averages for each of the Activitie within Subjects
+###### The resulting output from this assumption is Output3.txt
