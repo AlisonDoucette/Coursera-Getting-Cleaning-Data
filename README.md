@@ -24,11 +24,11 @@
 
 As Step 5 could be interpreted in multiple ways three alternate intepretations and file outputs are created
 
-###### Interpretation #1: Create a row of variable averages for each of the Subjects WITHIN Activities
+###### Interpretation #1: Create a row of variable averages for each of the Subjects WITHIN Activities - 1 row per Subject/Activity
 ###### The resulting output from this assumption is Output1.txt
 
-###### Interpretation #2: Create a row of variable averages for each of the  Activities WITHIN Subjects
+###### Interpretation #2: Create a row of variable averages for each of the  Activities WITHIN Subjects, 1 row per Activity/Subject
 ###### The resulting output from this assumption is Output2.txt
 
-###### Interpretation #3 1 row of variable averages for EACH of the Activities and an additional row of variable of averages for each of the Subjects. This is not really tidy data but a valid interpretation given the word EACH
+###### Interpretation #3 1 row of variable averages for EACH of the Activities and an additional row of variable of averages for each of the Subjects. This is not really tidy data but a valid interpretation given the word EACH.
 ###### The resulting output from this assumption is Output3.txt
