@@ -21,9 +21,14 @@
 ###### Note This was interpreted as providing column names for the variables from the "Feature.List" dataset.
 
 ##### 5) From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-###### Note: This was first interpreted as creating a row of variable averages for each of the Activities and an additional row of variable of averages for each of the Subjects.
+
+As Step 5 could be interpreted in multiple ways three alternate intepretations and file outputs are created
+
+###### Interpretation #1: Create a row of variable averages for each of the Subjects WITHIN Activities
 ###### The resulting output from this assumption is Output1.txt
-###### Note: This was secondly interpreted as creating a row of variable averages for each of the Subjects within Activities
+
+###### Interpretation #2: Create a row of variable averages for each of the  Activities WITHIN Subjects
 ###### The resulting output from this assumption is Output2.txt
-###### Note: This was secondly interpreted as creating a row of variable averages for each of the Activitie within Subjects
+
+###### Interpretation #3 1 row of variable averages for EACH of the Activities and an additional row of variable of averages for each of the Subjects. This is not really tidy data but a valid interpretation given the word EACH
 ###### The resulting output from this assumption is Output3.txt
