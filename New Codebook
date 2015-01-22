@@ -9,7 +9,8 @@ Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ort
 ** http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
 ***The original zip file can be found here: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
-The experiment calculated multi-directional forces experienced by test subjects wearing a smart phone.
+The experiment calculated multi-directional forces experienced by test subjects wearing a smart phone accelerometer and gyroscope.
+
 All file formats are .txt
 
 Data Descriptions:
