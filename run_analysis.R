@@ -120,8 +120,6 @@ colnames(TestY) <- "Activity"
     Output.Data1 <- Output.Data1[with(Output.Data1, order(Output.Data1$Activity, Output.Data1$Subject)),]
     write.table(Output.Data1,"C:/Alison/R/R Working Directory/Project/ProjectFiles/Output.Data1.txt",row.name=FALSE)
 
-
-
 ## Write Output Data Table - Interpretation #2 - 1 row for each Subject/Activity Means 
     Output.Data2 <- aggregate(Tidy.Data[,4:82], by=list(Tidy.Data$SubjectNum, Tidy.Data$Activity.Name), FUN=mean)
     Output.Data2 <-setnames(Output.Data2, old = c('Group.1','Group.2'), new = c('Subject','Activity'))
