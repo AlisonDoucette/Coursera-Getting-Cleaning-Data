@@ -70,3 +70,56 @@ Use of this dataset in publications must be acknowledged by referencing the foll
 This dataset is distributed AS-IS and no responsibility implied or explicit can be addressed to the authors or their institutions for its use or misuse. Any commercial use is prohibited.
 
 Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
+
+Codebook for Smart Phone Processed "Tidy Data Set"
+
+January 19, 2015
+Codebook prepared by Alison Doucette for Tidy Data Set of Smart Phone Data
+
+The Smart Phone data citation:
+Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+
+** http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+***The original zip file can be found here: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+The experiment calculated multi-directional forces experienced by test subjects wearing a smart phone accelerometer and gyroscope.
+
+All file formats are .txt
+
+Data Descriptions:
+The Output.Data1 file contains calculated means data for the smart phone dataset referenced above(262 KB)
+* The first column in the dataset is for the Activity, the second column is for the Subject.
+* Subjects are numbered from 1 to 30. The age bracket for these subjects was 19-48 years.
+* Activities are alphanumeric: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+* The variables(79 remaining columns) are for the means of the mean and standard deviations (in Hz) for sensor data for the x,y,z axes.
+* There is 1 row for the means for each Activity/Subject combination.
+
+The Output.Data2 file contains calculated means data for the smart phone dataset referenced above.(262 KB)
+* The first column in the dataset is for the Subject, the second column is for the Activity.
+* Subjects are numbered from 1 to 30. The age bracket for these subjects was 19-48 years.
+* Activities are alphanumeric: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+* The variables(79 remaining columns) are for the means of the mean and standard deviations (in Hz) for sensor data for the x,y,z axes.
+* There is 1 row for the means for each Subject/Activity combination.
+
+The Output.Data3 file contains calculated means data for the smart phone dataset referenced above. (55 KB)
+* The first column in the dataset is for the Subject/Activity type. 
+* Subjects are numbered from 1 to 30. The age bracket for these subjects was 19-48 years.
+* Activities are alphanumeric: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+* The variables(79 remaining columns) are for the means of the mean and standard deviations (in Hz) for sensor data for the x,y,z axes.
+* There is 1 row for the means for each Activity across the dataset and 1 row for the means for each Subject.
+
+Notes on variables: (from original dataset descriptions)
+* The variables come from the an accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. 
+* These signals were used to estimate variables of the feature vector for each pattern:  
+  '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+* These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. 
+* Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. 
+* Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+* Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+* Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+
+
+
+
+
