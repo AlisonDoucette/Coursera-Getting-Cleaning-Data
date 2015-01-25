@@ -83,24 +83,37 @@ Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ort
 ***The original zip file can be found here: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
 The experiment calculated multi-directional forces experienced by test subjects wearing a smart phone accelerometer and gyroscope.
+Codebook for Smart Phone Processed "Tidy Data Set"
+
+January 19, 2015
+Codebook prepared by Alison Doucette for Tidy Data Set of Smart Phone Data
+
+The Smart Phone data citation for original dataset.
+Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+
+** http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+***The original zip file can be found here: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+The experiment calculated multi-directional forces experienced by test subjects wearing a smart phone accelerometer and gyroscope.
+
+This tidy dataset version of The data stitches together the observational data and the descriptive data for the observations.
 
 All file formats are .txt
 
 Data Descriptions:
 The Output.Data1 file contains calculated means data for the smart phone dataset referenced above(262 KB)
-* The first column in the dataset is for the Activity, the second column is for the Subject.
+* The first column in the dataset is for the Activity, the second column is for the Subject tested.
 * Subjects are numbered from 1 to 30. The age bracket for these subjects was 19-48 years.
 * Activities are alphanumeric: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
-* The variables(79 remaining columns) are for the means of the mean and standard deviations (in Hz) for sensor data for the x,y,z axes.
+* The variables(65 remaining columns) are for the means of the mean and standard deviations (in Hz) for sensor data (for the x,y,z axes where applicable).
 * There is 1 row for the means for each Activity/Subject combination.
 
 The Output.Data2 file contains calculated means data for the smart phone dataset referenced above.(262 KB)
-* The first column in the dataset is for the Subject, the second column is for the Activity.
+* The first column in the dataset is for the Subject tested the second column is for the Activity.
 * Subjects are numbered from 1 to 30. The age bracket for these subjects was 19-48 years.
 * Activities are alphanumeric: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
-* The variables(79 remaining columns) are for the means of the mean and standard deviations (in Hz) for sensor data for the x,y,z axes.
+* The variables(65 remaining columns) are for the means of the mean and standard deviations (in Hz) for sensor data (for the x,y,z axes where applicable).
 * There is 1 row for the means for each Subject/Activity combination.
-
 
 Notes on variables: (from original dataset descriptions)
 * The variables come from the an accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. 
@@ -111,6 +124,9 @@ Notes on variables: (from original dataset descriptions)
 * Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 * Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
 * Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+
+
 
 
 
