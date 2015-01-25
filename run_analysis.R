@@ -17,7 +17,6 @@
 ##  14) Aggregates the means by Activity and then Subject
 ##  15) Write the means files out to an external data table - Output.Data2
 ##  16) Aggregates the means by Subject and then Activity
-##  17) Write the means files out to an external data table - Output.Data3
 ## Load Libraries
     library(reshape)
     library(plyr) 
@@ -69,11 +68,13 @@
 ## Set column names on X test to feature list
     colnames(TestX)<- Feature.List
     
-## Select only the column with names containing "mean" or "std"
+## Select only the column with names containing "mean" or "std" and not meanFreq
     Subset.Columns.TestX <-TestX[ , grepl( "mean()|std()" , names( TestX ) ) ]
+    Subset.Columns.TestX <-Subset.Columns.TestX[ , !grepl( "meanFreq" , names( Subset.Columns.TestX ) ) ]
+    
     
 ## Read Y Test Data
-    TestY<-read.table("y_test.txt")
+    TestY<-read.table("y_test.txt")    
     
 ## Set column names for Y Test Data to Activity
 colnames(TestY) <- "Activity"
@@ -94,11 +95,14 @@ colnames(TestY) <- "Activity"
 ## Set column names on X train to feature list
     colnames(TrainX)<- Feature.List
     
-## Select only the columns containin the strings :mean or std
+## Select only the columns containin the strings :mean or std and not meanFreq
     Subset.Columns.TrainX <-TrainX[ , grepl( "mean()|std()" , names( TrainX ) ) ]
+    Subset.Columns.TrainX <-Subset.Columns.TrainX[ , !grepl( "meanFreq" , names( Subset.Columns.TrainX ) ) ]
     
 ## Read Y train Data
+    
     TrainY<-read.table("y_train.txt")
+    ## Set column names for Y Train to Activity
     colnames(TrainY) <- "Activity"
     
 ## Read Subject Train Data
@@ -111,29 +115,26 @@ colnames(TestY) <- "Activity"
     Final.Data<-rbind(Test.Data2,Train.Data2)
     
 ## reorder columns in Final Data
-    Final.Data2 <- Final.Data[, c(1,82,81,2:80)]
+    Final.Data2 <- Final.Data[, c(1,68,69,2:67)]
     Tidy.Data <- arrange(Final.Data2,Activity,SubjectNum)
     
 ## Write Output Data Table - Interpretation #1 - 1 row for each Activity/Subject Means
-    Output.Data1 <- aggregate(Tidy.Data[,4:82], by=list(Tidy.Data$Activity.Name, Tidy.Data$SubjectNum), FUN=mean)
+    Output.Data1 <- aggregate(Tidy.Data[,4:69], by=list(Tidy.Data$Activity.Name, Tidy.Data$SubjectNum), FUN=mean)
     Output.Data1 <-setnames(Output.Data1, old = c('Group.1','Group.2'), new = c('Activity','Subject'))
     Output.Data1 <- Output.Data1[with(Output.Data1, order(Output.Data1$Activity, Output.Data1$Subject)),]
+    names(Output.Data1) <-gsub (x=names(Output.Data1),pattern="\\-", replacement = "")
+    names(Output.Data1) <-gsub (x=names(Output.Data1),pattern="\\()", replacement = "")
+    names(Output.Data1) <- tolower(names(Output.Data1))
     write.table(Output.Data1,"C:/Alison/R/R Working Directory/Project/ProjectFiles/Output.Data1.txt",row.name=FALSE)
 
+
 ## Write Output Data Table - Interpretation #2 - 1 row for each Subject/Activity Means 
-    Output.Data2 <- aggregate(Tidy.Data[,4:82], by=list(Tidy.Data$SubjectNum, Tidy.Data$Activity.Name), FUN=mean)
+    Output.Data2 <- aggregate(Tidy.Data[,4:69], by=list(Tidy.Data$SubjectNum, Tidy.Data$Activity.Name), FUN=mean)
     Output.Data2 <-setnames(Output.Data2, old = c('Group.1','Group.2'), new = c('Subject','Activity'))
     Output.Data2 <- Output.Data2[with(Output.Data2, order(Output.Data2$Subject, Output.Data2$Activity)),]
+    names(Output.Data2) <-gsub (x=names(Output.Data2),pattern="\\-", replacement = "")
+    names(Output.Data2) <-gsub (x=names(Output.Data2),pattern="\\()", replacement = "")
+    names(Output.Data2) <- tolower(names(Output.Data2))
     write.table(Output.Data2,"C:/Alison/R/R Working Directory/Project/ProjectFiles/Output.Data2.txt",row.name=FALSE)
 
-## Write Output Data Table - Interpretation #3 - 1 row for each Activity Means and 1 row for each Subject Means 
-## (Not really Tidy data but a valid interpretation of the instructions using "Each" and no "within")
-    Activity.Means <- aggregate(Tidy.Data[,4:82], by=list(Tidy.Data$Activity.Name), FUN=mean)
-    Subject.Means <- aggregate(Tidy.Data[,4:82], by=list(Tidy.Data$SubjectNum), FUN=mean)
-    Subject.Means <-setnames(Subject.Means, old = c('Group.1'), new = c('Subject/Activity'))    
-    Activity.Means <-setnames(Activity.Means, old = c('Group.1'), new = c('Subject/Activity')) 
-        
-## Join together Activity Means file and Subject Means File    
-    Output.Data3 <- rbind(Subject.Means,Activity.Means)
-## Write Output Data Table - Interpretation #1 - 1 row for each Activity Means and 1 row for each Subject Means
-    write.table(Output.Data3,"C:/Alison/R/R Working Directory/Project/ProjectFiles/Output.Data3.txt",row.name=FALSE)
+#
