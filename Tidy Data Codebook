@@ -15,17 +15,17 @@ All file formats are .txt
 
 Data Descriptions:
 The Output.Data1 file contains calculated means data for the smart phone dataset referenced above(262 KB)
-* The first column in the dataset is for the Activity, the second column is for the Subject.
+* The first column in the dataset is for the Activity, the second column is for the Subject tested.
 * Subjects are numbered from 1 to 30. The age bracket for these subjects was 19-48 years.
 * Activities are alphanumeric: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
-* The variables(65remaining columns) are for the means of the mean and standard deviations (in Hz) for sensor data for the x,y,z axes.
+* The variables(65 remaining columns) are for the means of the mean and standard deviations (in Hz) for sensor data (for the x,y,z axes where applicable).
 * There is 1 row for the means for each Activity/Subject combination.
 
 The Output.Data2 file contains calculated means data for the smart phone dataset referenced above.(262 KB)
-* The first column in the dataset is for the Subject, the second column is for the Activity.
+* The first column in the dataset is for the Subject tested the second column is for the Activity.
 * Subjects are numbered from 1 to 30. The age bracket for these subjects was 19-48 years.
 * Activities are alphanumeric: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
-* The variables(65 remaining columns) are for the means of the mean and standard deviations (in Hz) for sensor data for the x,y,z axes.
+* The variables(65 remaining columns) are for the means of the mean and standard deviations (in Hz) for sensor data (for the x,y,z axes where applicable).
 * There is 1 row for the means for each Subject/Activity combination.
 
 Notes on variables: (from original dataset descriptions)
