@@ -22,7 +22,7 @@
 
 ##### 5) From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-As Step 5 could be interpreted in multiple ways three alternate intepretations and file outputs are created
+As Step 5 could be interpreted in multiple ways two alternate intepretations and file outputs are created
 
 ###### Interpretation #1: Create a row of variable averages for each of the Subjects WITHIN Activities - 1 row per Subject/Activity
 ###### The resulting output from this assumption is Output1.txt
